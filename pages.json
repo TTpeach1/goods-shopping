@@ -1,12 +1,63 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom",
+                "navigationBarTitleText": "唯品会",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cat/cat",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/class/class",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+    "tabBar": {
+      "list": [
+        {"text":"首页",
+        "pagePath":"pages/home/home",
+        "iconPath": "static/tab_icons/home.png",
+        "selectedIconPath": "static/tab_icons/home-active.png"},
+        {"text":"购物车",
+        "pagePath":"pages/cat/cat",
+        "iconPath": "static/tab_icons/cart.png",
+        "selectedIconPath": "static/tab_icons/cart-active.png"},
+        {"text":"我的",
+        "pagePath":"pages/my/my",
+        "iconPath": "static/tab_icons/my.png",
+        "selectedIconPath": "static/tab_icons/my-active.png"},
+        {"text":"分类",
+        "pagePath":"pages/class/class",
+        "iconPath": "static/tab_icons/cate.png",
+        "selectedIconPath": "static/tab_icons/cate-active.png"}
+        ]
+    },
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
