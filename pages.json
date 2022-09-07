@@ -38,6 +38,16 @@
             
         }
     ],
+    "subPackages": [
+      {
+        "root": "subpkgs",
+        "pages": [
+          {
+            "path": "goods_detail/goods_detail"
+          }
+        ]
+      }
+    ],
     "tabBar": {
       "list": [
         {"text":"首页",
