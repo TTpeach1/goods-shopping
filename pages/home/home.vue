@@ -26,11 +26,11 @@
             <!-- 楼层图片区域 -->
             <view class="floor-img-box">
               <!-- 左侧大图片的盒子 -->
-              <view class="left-img-box"><image class="left-img" :src="item.product_list[0].image_src" :style="{ width: item.product_list[0].image_width + 'rpx' }"></image></view>
+              <view class="left-img-box"><image @click="gogoodslist(item.product_list[0].navigator_url)" class="left-img" :src="item.product_list[0].image_src" :style="{ width: item.product_list[0].image_width + 'rpx' }"></image></view>
               <!-- 右侧 4 个小图片的盒子 -->
               <view class="right-img-box">
                 <view class="right-img-item" v-for="(item2, i2) in item.product_list" :key="i2" v-if="i2 !== 0">
-                  <image :src="item2.image_src" mode="widthFix" :style="{ width: item2.image_width + 'rpx' }"></image>
+                  <image @click="gogoodslist(item2.navigator_url)" :src="item2.image_src" mode="widthFix" :style="{ width: item2.image_width + 'rpx' }"></image>
                 </view>
               </view>
             </view>
@@ -60,6 +60,12 @@ export default {
       uni.navigateTo({
         url: `/subPkg/goods_detail/goods_detail?goods_id=${id}`
       });
+    },
+    gogoodslist(url){
+      console.log(url)
+      uni.navigateTo({
+        url:"/subpkgs/goods_list/goods_list?"+url.split('?')[1]
+      })
     },
     async getNavList() {
       const res = await getNavListAPI();
